@@ -23,15 +23,64 @@ const seattle = {
         return this.cookiesPerHour;
     },
 }
+function getRandom(max, min) {
+    return Math.ceil(Math.random() * (max - min) + min);
+}
+const seattle = {
+    min: 23,
+    max: 65,
+    avg: 6.3,
+    location: 'Seattle',
+    hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+    customersPerHour: function() {
+        console.log(this.max);
+        console.log(this.min);
+        return getRandom(this.max, this.min);
+    },
+    cookiesPerHour: [],
+    getCookies: function() {
+        for(let i = 0; i < this.hoursOfOperation.length; i++) {
+            console.log('seattle avg cookies/sale', this.avg);
+            console.log('seattle avg customers/hour', this.customersPerHour());
+            this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
+        }
+        return this.cookiesPerHour;
+    },
+}
+function getRandom(max, min) {
+    return Math.ceil(Math.random() * (max - min) + min);
+}
+const seattle = {
+    min: 23,
+    max: 65,
+    avg: 6.3,
+    location: 'Seattle',
+    hoursOfOperation: ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"],
+    customersPerHour: function() {
+        console.log(this.max);
+        console.log(this.min);
+        return getRandom(this.max, this.min);
+    },
+    cookiesPerHour: [],
+    getCookies: function() {
+        for(let i = 0; i < this.hoursOfOperation.length; i++) {
+            console.log('seattle avg cookies/sale', this.avg);
+            console.log('seattle avg customers/hour', this.customersPerHour());
+            this.cookiesPerHour.push(Math.ceil(this.avg * this.customersPerHour()));
+        }
+        return this.cookiesPerHour;
+    },
+}
 let hoursDemo = ["6am", "7am", "8am", "9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm", "4pm", "5pm", "6pm", "7pm"];
 let cookieDemo = seattle.getCookies(this.cookiesPerHour);
-let hoursArray = document.querySelector('.output')
+let hoursArray = document.querySelector(".output");
 for(let i = 0; i < hoursDemo.length; i++) {
     //hoursDemo[i].innerHTML
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo[i]}: ${cookieDemo[i]} cookies`;
-    hoursArray.append(variable);
+    let variable = document.createElement("td");
+    variable.innerHTML = `${cookieDemo[i]}`;
+    hoursArray.appendChild(variable);
 }
+
 
 
 
@@ -65,8 +114,8 @@ let cookieDemo2 = tokyo.getCookies(this.cookiesPerHour);
 let hoursArray2 = document.querySelector('.output2')
 for(let i = 0; i < hoursDemo.length; i++) {
     //hoursDemo[i].innerHTML
-    let variable = document.createElement("tr");
-    variable.innerHTML = `${hoursDemo2[i]}: ${cookieDemo2[i]} cookies`;
+    let variable = document.createElement("td");
+    variable.innerHTML = `${cookieDemo2[i]}`;
     hoursArray2.appendChild(variable);
 }
 
@@ -100,8 +149,8 @@ let cookieDemo3 = dubai.getCookies(this.cookiesPerHour);
 let hoursArray3 = document.querySelector('.output3')
 for(let i = 0; i < hoursDemo3.length; i++) {
     //hoursDemo[i].innerHTML
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo3[i]}: ${cookieDemo3[i]} cookies`;
+    let variable = document.createElement("td");
+    variable.innerHTML = ` ${cookieDemo3[i]}`;
     hoursArray3.append(variable);
 }
 
@@ -134,8 +183,8 @@ let cookieDemo4 = paris.getCookies(this.cookiesPerHour);
 let hoursArray4 = document.querySelector('.output4')
 for(let i = 0; i < hoursDemo4.length; i++) {
     //hoursDemo[i].innerHTML
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo4[i]}: ${cookieDemo4[i]} cookies`;
+    let variable = document.createElement("td");
+    variable.innerHTML = `${cookieDemo4[i]}`;
     hoursArray4.append(variable);
 }
 
@@ -167,8 +216,8 @@ let cookieDemo5 = lima.getCookies(this.cookiesPerHour);
 let hoursArray5 = document.querySelector('.output5')
 for(let i = 0; i < hoursDemo.length; i++) {
     //hoursDemo[i].innerHTML
-    let variable = document.createElement("li");
-    variable.innerHTML = `${hoursDemo5[i]}: ${cookieDemo5[i]} cookies`;
+    let variable = document.createElement("td");
+    variable.innerHTML = `${cookieDemo5[i]}`;
     hoursArray5.append(variable);
 }
 

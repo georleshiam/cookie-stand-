@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +12,12 @@
             flex-wrap: nowrap;
             margin: auto;
         }
+
         .flex-box div {
             margin: auto;
             text-align: center;
         }
+
         .nav {
             background-color: palevioletred;
             text-align: center;
@@ -23,6 +25,7 @@
             margin: auto;
             width: 95%;
         }
+
         .nav b {
             text-decoration: none;
             padding: 6px;
@@ -30,46 +33,77 @@
         }
     </style>
 </head>
+
 <body>
     <div class="nav">
         <a href="../Homepage/Index.html">Homepage</a>
     </div>
-    <div class="flex-box">
-        <div>
-            <ul class="output">
-                <h1>Seattle</h1>
-                
-            </ul>
-        </div>
-        <div >
-            <ul class="output2">
+    <div class=box>
+        <ul class="output">
+            <style>
+                table,
+                td,
+                th {
+                    border: 3px solid black;
+                }
+            </style>
+            <table>
+                <colgroup>
+                    <col span="2" style="background-color: #D6EEEE">
+                </colgroup>
+                <tr>
+                    <th>      </th>
+                    <th>6:00am</th>
+                    <th>7:00am</th>
+                    <th>8:00am</th>
+                    <th>9:00am</th>
+                    <th>10:00am</th>
+                    <th>11:00am</th>
+                    <th>12:00pm</th>
+                    <th>1:00am</th>
+                    <th>2:00am</th>
+                    <th>3:00am</th>
+                    <th>4:00am</th>
+                    <th>5:00am</th>
+                    <th>6:00am</th>
+                    <th>7:00am</th>
 
-                <h1>Tokyo</h1>
+                    <div class="flex-box">
+                        <div>
+                <tr class="output">
+                    
+                    <td>Seattle</td>
 
-            </ul>
-                
-            
-        </div>
-        <div>
-            <ul class="output3">
-                <h1>Dubai</h1>
-                
-            </ul>
-        </div>
-        <div>
-            <ul class="output4">
-                <h1>Paris</h1>
-                
-            </ul>
-        </div>
-        <div>
-            <ul class="output5">
-                <h1>Lima</h1>
-                
-            </ul>
-        </div>
+                </tr>
+
+                <tr class="output2">
+
+                    <td>Tokyo</td>
+
+                </tr>
+
+
+
+                <tr class="output3">
+                    <td>Dubai</td>
+
+                </tr>
+
+                <tr class="output4">
+                    <td>Paris</td>
+
+                </tr>
+
+                <tr class="output5">
+                    <td>Lima</td>
+
+                </tr>
+
+            </table>
+        </ul>
     </div>
     </div>
 </body>
 <script src="app.js"></script>
+
 </html>
